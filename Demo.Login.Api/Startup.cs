@@ -38,7 +38,7 @@ namespace Demo.Login.Api
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
                 {
-                    options.Cookie.Domain = "localhost";
+                    options.Cookie.Domain = ".domain.localhost";
                     options.Cookie.Name = "sso";
                     options.Cookie.Path = "/";
                     options.LoginPath = "/User/SignIn";
@@ -67,8 +67,11 @@ namespace Demo.Login.Api
     {
         public static async Task ValidateAsync(CookieValidatePrincipalContext context)
         {
-            context.RejectPrincipal();
-            await context.HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            if (false)
+            {
+                context.RejectPrincipal();
+                await context.HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            }
         }
     }
 }

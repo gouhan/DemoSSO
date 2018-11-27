@@ -38,7 +38,7 @@ namespace Demo.Login.Api.Controllers
                 AllowRefresh = false,
             };
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, userPrincipal, authProperties);
-            return new ResponseDTO();
+            return new ResponseDTO { Success = true, Message = "登录成功" };
         }
 
         [AllowAnonymous]
