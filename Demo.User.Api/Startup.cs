@@ -5,12 +5,14 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using StackExchange.Redis;
 
 namespace Demo.User.Api
 {
@@ -26,11 +28,17 @@ namespace Demo.User.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var redis = ConnectionMultiplexer.Connect("192.168.1.121,connectTimeout=5000,password=antoine123!@#");
+            // 确保每个应用程序的此属性值都一样
+            services.AddDataProtection(options => options.ApplicationDiscriminator = "oneaspnet")
+                .PersistKeysToRedis(redis, "onekey");
+
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
                 {
                     options.Cookie.Domain = "localhost";
                     options.Cookie.Name = "sso";
+                    options.Cookie.Path = "/";
                     options.LoginPath = "/User/SignIn";
                     options.AccessDeniedPath = "/User/Deny";
                     options.Events = new CookieAuthenticationEvents
