@@ -1,0 +1,13 @@
+D:\Work\opensources\DemoSSO\Demo.Login.Api\bin\Debug\netcoreapp2.1\Demo.Login.Api.deps.json
+D:\Work\opensources\DemoSSO\Demo.Login.Api\bin\Debug\netcoreapp2.1\Demo.Login.Api.runtimeconfig.json
+D:\Work\opensources\DemoSSO\Demo.Login.Api\bin\Debug\netcoreapp2.1\Demo.Login.Api.runtimeconfig.dev.json
+D:\Work\opensources\DemoSSO\Demo.Login.Api\bin\Debug\netcoreapp2.1\Demo.Login.Api.dll
+D:\Work\opensources\DemoSSO\Demo.Login.Api\bin\Debug\netcoreapp2.1\Demo.Login.Api.pdb
+D:\Work\opensources\DemoSSO\Demo.Login.Api\obj\Debug\netcoreapp2.1\Demo.Login.Api.csproj.CoreCompileInputs.cache
+D:\Work\opensources\DemoSSO\Demo.Login.Api\obj\Debug\netcoreapp2.1\Demo.Login.Api.RazorAssemblyInfo.cache
+D:\Work\opensources\DemoSSO\Demo.Login.Api\obj\Debug\netcoreapp2.1\Demo.Login.Api.RazorAssemblyInfo.cs
+D:\Work\opensources\DemoSSO\Demo.Login.Api\obj\Debug\netcoreapp2.1\Demo.Login.Api.AssemblyInfoInputs.cache
+D:\Work\opensources\DemoSSO\Demo.Login.Api\obj\Debug\netcoreapp2.1\Demo.Login.Api.AssemblyInfo.cs
+D:\Work\opensources\DemoSSO\Demo.Login.Api\obj\Debug\netcoreapp2.1\Demo.Login.Api.RazorTargetAssemblyInfo.cache
+D:\Work\opensources\DemoSSO\Demo.Login.Api\obj\Debug\netcoreapp2.1\Demo.Login.Api.dll
+D:\Work\opensources\DemoSSO\Demo.Login.Api\obj\Debug\netcoreapp2.1\Demo.Login.Api.pdb
